@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-controller="loginController">
+Username : <input type="text" name="username" ng-model="member.username"/>
+Password : <input type="text" name="password" ng-model="member.password"/>
+<input type="submit" value="submit" ng-click="login()"/>
+User Successfully loggedin as {{member.firstName}}
+
+</div>
+
+
+
+<script>
+var myApp = angular.module("myApp",[])
+var myController = myApp.controller("loginController", function($scope,$http){
+	
+	$scope.username = "Default";
+	$scope.password = "Default";
+	
+	$scope.login = function(){
+		
+		
+		$http.get("testAction").success(
+                function(data, status, headers, config) {
+                        $scope.member = data;
+                }).error(function(data, status, headers, config) {
+                                // called asynchronously if an error occurs
+                                // or server returns response with an error status.
+        });
+	};
+	
+	
+});
+
+
+
+</script>
+
+</body>
+</html>

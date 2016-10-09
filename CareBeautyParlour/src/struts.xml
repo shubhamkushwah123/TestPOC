@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+   
+   <struts>
+   		
+   		<constant name="struts.devMode" value="true" />
+   		
+   		<!--   <constant name="struts.ui.theme" value="simple" /> -->
+   		
+   		<package name="default"  extends="struts-default">
+   
+   		<action name="testAction" class="com.beauty.parlour.actions.TestAction">
+   		<result name="success">/jsp/success.jsp</result>
+   		<result name="failure">/jsp/error.jsp</result>
+   		</action>
+   		
+   		<action name="registerUserAction" class="com.beauty.parlour.actions.MemberRegistrationAction">
+   		<result name="success">login.jsp</result>
+   		<result name="update">jsp/appointment.jsp</result>
+   		<result name="failure">error.jsp</result>
+   		<result name="input">/jsp/registration.jsp</result>
+   		</action>
+   		
+   		<action name="loginAction" class="com.beauty.parlour.actions.LoginAction">
+   		<result name="success">jsp/appointment.jsp</result>
+   		<result name="update">jsp/update.jsp</result>
+   		<result name ="submit">jsp/appointment.jsp</result>
+   		<result name="failure">error.jsp</result>
+   		<result name="input">/jsp/login.jsp</result>
+   		</action>
+   		
+   		<action name="bookAppointmentAction" class="com.beauty.parlour.actions.BookAppointmentAction">
+   		<result name="book">jsp/appointmentConfirmation.jsp</result>
+   		<result name="get">jsp/appointment.jsp</result>
+   		<result name="cancel">jsp/appointmentConfirmation.jsp</result>
+   		<result name="failure">jsp/error.jsp</result>
+   		</action>
+   		
+   		<action name="imageUploadAction" class="com.beauty.parlour.actions.ImageUploadAction">
+   		<param name="maximumSize">99097152</param>
+   		<param name="allowedTypes">image/png,image/jpg,image/jpeg,image/gif</param>
+   		<result name="success">jsp/success.jsp</result>
+   		<result name="failure">jsp/failure.jsp</result>
+   		<result name="input">jsp/imageUpload.jsp</result>
+   		</action>
+  
+  		<action name="imageGalleryAction" class="com.beauty.parlour.actions.ImageGalleryAction">
+   		<result name="success">jsp/imageGallery.jsp</result>
+   		<result name="failure">jsp/failure.jsp</result>
+   		<result name="input">jsp/imageUpload.jsp</result>
+   		</action>
+   		</package>
+   		
+   </struts>
