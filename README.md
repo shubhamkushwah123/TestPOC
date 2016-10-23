@@ -26,21 +26,21 @@
 Note : Please execute the below commands from the location, where source is present. i.e. BliffoscopeAnalyser
 
 # To clean the existing build code.
-=> mvn clean
+	=> mvn clean
 
 # To compile source code
-=> mvn compile
+	=> mvn compile
 
 # To run Junit test cases
-=> mvn test
+	=> mvn test
 
 # To package the code into jar
-=> mvn package
+	=> mvn package
 
 # TO run the application
-=> cd target
+	=> cd target
 
-=> java -jar BliffoscopeAnalyser-1.0.jar 
+	=> java -jar BliffoscopeAnalyser-1.0.jar 
 
 *******************************************************************************
 ******************************Thank You****************************************
