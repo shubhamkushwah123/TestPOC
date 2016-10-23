@@ -2,7 +2,7 @@
 *********************Author : Shubham Singh Kushwah**************************
 *****************************************************************************
 
-**Instructions**
+# Bliffoscope Instructions
 
 1) Application is packaged into a zip file named BliffoscopeExercise.zip.
 
